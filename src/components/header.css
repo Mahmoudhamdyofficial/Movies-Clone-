@@ -1,0 +1,30 @@
+.active {
+    /* background-color: blue; */
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    text-decoration: none;
+    /* margin-right: 8px;
+    margin-left: 8px; */
+    margin: 8px;
+
+
+}
+
+#lang {
+    border-radius: 5px;
+    border-color: gray;
+    color: rgb(255, 255, 255);
+    margin: 8px;
+    height: fit-content;
+}
+
+.navlink {
+    color: rgb(179, 170, 170);
+    text-decoration: none;
+    /* margin-right: 8px;
+    margin-left: 8px; */
+    margin: 8px;
+
+
+
+}
