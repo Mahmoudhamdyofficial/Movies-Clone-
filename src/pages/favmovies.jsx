@@ -59,7 +59,7 @@ function Favmovies() {
                 </Row>
             </Container>
 
-        </> : <div className="no-fav">
+        </> : <div className=" container-fluid no-fav">
             <div className="content">
                 <p className="text-white text-center fs-3 d-block">You have no favorite movies yet! Browse and add some to your favorites</p>
                 <button className="btn-movies"

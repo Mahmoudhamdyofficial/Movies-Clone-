@@ -10,7 +10,7 @@ function Home() {
             <button className="go-movies "
                 onClick={() => navigate("/moveis")}
             >
-                Go to Movies
+                Explore Movies
             </button>
         </div>
     );
