@@ -4,7 +4,7 @@ import Notfound from './components/notfound'
 import Singlemovie from './pages/singlemovie'
 import Applayout from './components/applayout/applayout';
 import Favmovies from './pages/favmovies';
-import Home from './pages/home';
+import Home from './pages/Home';
 
 export const Router = createBrowserRouter([
     {
