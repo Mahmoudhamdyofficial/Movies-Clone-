@@ -22,6 +22,7 @@ function Singlemovie() {
     return (
         <>
 
+
             <div className="movie-container" style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
                 backgroundPosition: "center",
@@ -29,7 +30,7 @@ function Singlemovie() {
                 backgroundRepeat: "no-repeat",
                 backgroundAttachment: "fixed",
             }}>
-                <div className="poster-section ms-5">
+                <div className="poster-section">
                     <img className=" rounded-4 mt-3"
                         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                         alt={movie.title}
@@ -52,6 +53,7 @@ function Singlemovie() {
             </div>
 
         </>
+
     );
 }
 

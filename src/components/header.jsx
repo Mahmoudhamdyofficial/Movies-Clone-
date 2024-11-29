@@ -22,20 +22,26 @@ function Header() {
 
         <Navbar bg="dark" data-bs-theme="dark">
             <Container>
-                <Navbar.Brand href="#home" className='mt-0 pt-0'> <BiMoviePlay />
-                    <p className='d-inline'> pop movies</p>
-                    {/* {Lang} */}
-                </Navbar.Brand>
-                <Nav className="me-auto">
+                <div className="row">
+                    <div className='col-12 col-lg-4 text-sm-center  '>
+                        <Navbar.Brand href="#home" className='mt-0 p-0'> <BiMoviePlay />
+                            <p className='d-inline'> pop movies</p>
+                            {/* {Lang} */}
+                        </Navbar.Brand>
+                    </div>
+                    <div className='col-12 col-lg-8 text-center'>
+                        <Nav className="text-center">
 
-                    <NavLink className={({ isActive }) => (isActive ? "active" : "navlink")} to={"/"}>{Lang == "en" ? "Home" : "الرئيسية"}</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "active" : "navlink")} to={"/moveis"}>{Lang == "en" ? "Movies" : "الافلام"}</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "active" : "navlink")} to={"/favorites"}>{Lang == "en" ? "favorites" : "المفضلة"} <Badge bg="secondary" pill>
-                        {favmovies.length}
-                    </Badge></NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active" : "navlink")} to={"/"}>{Lang == "en" ? "Home" : "الرئيسية"}</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active" : "navlink")} to={"/moveis"}>{Lang == "en" ? "Movies" : "الافلام"}</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active" : "navlink")} to={"/favorites"}>{Lang == "en" ? "favorites" : "المفضلة"} <Badge bg="secondary" pill>
+                                {favmovies.length}
+                            </Badge></NavLink>
 
-                    <button id='lang' onClick={changeSiteLang}>{Lang == "en" ? "عربى" : "english"}</button>
-                </Nav>
+                            <button id='lang' onClick={changeSiteLang}>{Lang == "en" ? "عربى" : "english"}</button>
+                        </Nav>
+                    </div>
+                </div>
             </Container>
         </Navbar>
     );

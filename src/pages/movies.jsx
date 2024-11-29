@@ -89,45 +89,101 @@ function Movies() {
 
     return (
 
-        <>
-            <Container fluid
-                style={{ background: "rgb(60, 61, 55)" }}
-            >
-                <Row xs={1} md={5} className="g-4">
-                    {movies.map((movie) => {
-                        const isFavorite = fav.some(item => item.id == movie.id)
+        // <>
+        //     <Container fluid
+        //         style={{ background: "rgb(60, 61, 55)" }}
+        //     >
+        //         <Row xs={1} md={5} className="g-4">
+        //             {movies.map((movie) => {
+        //                 const isFavorite = fav.some(item => item.id == movie.id)
 
+
+        //                 return (
+
+        //                     <Col key={movie.id}>
+        //                         <Card className="bg-dark text-light hover-card" id="click" >
+        //                             <Card.Img onClick={() => { goDetails(movie.id) }} variant="top" src={`https://image.tmdb.org/t/p/original${movie.poster_path
+        //                                 }`} className="img-fluid movies-img" />
+        //                             <Card.Body style={{ height: "18vh" }} className="d-flex flex-column" >
+
+        //                                 <h6 className="text-truncate ">{movie.title}</h6>
+        //                                 <div className="row">
+        //                                     <div className="col-9">
+        //                                         <p style={{ color: 'rgb(242, 97, 63)' }} className=" mt-auto">Rate: {movie.vote_average.toFixed(1)}</p>
+        //                                     </div>
+        //                                     <div className="col-3">
+        //                                         <FaHeart id="click" onClick={() => toggleFavorite(movie)} style={{ color: isFavorite ? "red" : "gray" }} className="fs-3" />
+        //                                     </div>
+        //                                 </div>
+
+        //                             </Card.Body>
+        //                         </Card>
+        //                     </Col>
+        //                 )
+        //             })}
+        //         </Row>
+        //         <div className="row justify-content-center mt-3">
+        //             <div id="click" className="col-1"><MdKeyboardDoubleArrowLeft className="fs-3" onClick={prevPage} style={{ color: "ECDFCC" }} /></div>
+        //             <div id="click" className="col-1">< MdKeyboardDoubleArrowRight className="fs-3" onClick={nextPage} style={{ color: "ECDFCC" }} /></div>
+        //         </div>
+        //     </Container>
+        // </>
+        <>
+            <Container fluid style={{ background: "rgb(60, 61, 55)" }}>
+                <Row xs={2} sm={3} md={4} lg={5} className="g-4">
+                    {movies.map((movie) => {
+                        const isFavorite = fav.some(item => item.id == movie.id);
 
                         return (
-
                             <Col key={movie.id}>
-                                <Card className="bg-dark text-light hover-card" id="click" >
-                                    <Card.Img onClick={() => { goDetails(movie.id) }} variant="top" src={`https://image.tmdb.org/t/p/original${movie.poster_path
-                                        }`} className="img-fluid" />
-                                    <Card.Body style={{ height: "18vh" }} className="d-flex flex-column" >
-
-                                        <h6 className="text-truncate ">{movie.title}</h6>
+                                <Card className="bg-dark text-light hover-card" id="click">
+                                    <Card.Img
+                                        onClick={() => { goDetails(movie.id) }}
+                                        variant="top"
+                                        src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                                        className="img-fluid movies-img"
+                                    />
+                                    <Card.Body className="d-flex flex-column ">
+                                        <h6 className="text-truncate">{movie.title}</h6>
                                         <div className="row">
                                             <div className="col-9">
-                                                <p style={{ color: 'rgb(242, 97, 63)' }} className=" mt-auto">Rate: {movie.vote_average.toFixed(1)}</p>
+                                                <p style={{ color: 'rgb(242, 97, 63)' }} className="mt-auto">Rate: {movie.vote_average.toFixed(1)}</p>
                                             </div>
                                             <div className="col-3">
-                                                <FaHeart id="click" onClick={() => toggleFavorite(movie)} style={{ color: isFavorite ? "red" : "gray" }} className="fs-3" />
+                                                <FaHeart
+                                                    id="click"
+                                                    onClick={() => toggleFavorite(movie)}
+                                                    style={{ color: isFavorite ? "red" : "gray" }}
+                                                    className="fs-3"
+                                                />
                                             </div>
                                         </div>
-
                                     </Card.Body>
                                 </Card>
                             </Col>
-                        )
+                        );
                     })}
                 </Row>
+
                 <div className="row justify-content-center mt-3">
-                    <div id="click" className="col-1"><MdKeyboardDoubleArrowLeft className="fs-3" onClick={prevPage} style={{ color: "ECDFCC" }} /></div>
-                    <div id="click" className="col-1">< MdKeyboardDoubleArrowRight className="fs-3" onClick={nextPage} style={{ color: "ECDFCC" }} /></div>
+                    <div id="click" className="col-1">
+                        <MdKeyboardDoubleArrowLeft
+                            className="fs-3"
+                            onClick={prevPage}
+                            style={{ color: "ECDFCC" }}
+                        />
+                    </div>
+                    <div id="click" className="col-1">
+                        <MdKeyboardDoubleArrowRight
+                            className="fs-3"
+                            onClick={nextPage}
+                            style={{ color: "ECDFCC" }}
+                        />
+                    </div>
                 </div>
             </Container>
         </>
+
     );
 }
 export default Movies;

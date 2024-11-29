@@ -28,7 +28,7 @@ function Favmovies() {
             <Container fluid className="container-fav"
             // style={{ background: "rgb(60, 61, 55)" }}
             >
-                <Row xs={1} md={4} className="g-4">
+                <Row xs={2} sm={3} md={4} lg={5} className="g-4">
                     {favmovies.map((movie) => {
                         const isFavorite = favmovies.some(item => item.id == movie.id)
 

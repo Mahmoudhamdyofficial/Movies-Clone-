@@ -13,14 +13,27 @@
 }
 
 .go-movies {
-    padding: 10px 20px;
+    padding: 18px 80px;
+    margin: 9px;
     background-color: brown;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: larger;
 }
 
 .go-movies:hover {
     background-color: rgb(199, 63, 63);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+            url("../assets/movi-mobile.jpg");
+        min-height: 85vh;
+    }
 }

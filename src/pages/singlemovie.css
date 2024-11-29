@@ -1,14 +1,14 @@
-
 .movie-container {
     display: flex;
     overflow: hidden;
     color: white;
-
+    min-height: 100vh;
     /* background: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`, backgroundPosition:"center",backgroundSize:"cover"  */
 }
 
 .poster-section {
     width: 30%;
+    margin-inline-start: 35px;
 }
 
 .poster-section img {
@@ -102,9 +102,45 @@
 
     .poster-section {
         width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .poster-section img {
+        width: 65%;
     }
 
     .details-section {
         width: 100%;
     }
+
+    .details-content h1 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    .movie-container {
+        flex-direction: column;
+    }
+
+    .poster-section {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .poster-section img {
+        width: 55%;
+    }
+
+    .details-section {
+        width: 100%;
+    }
+
+    .details-content h1 {
+        font-size: 2.5rem;
+    }
+
 }
