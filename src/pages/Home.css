@@ -32,8 +32,11 @@
 @media (max-width: 768px) {
     .about-container {
         background-image:
-            linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+            linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),
             url("../assets/movi-mobile.jpg");
         min-height: 85vh;
+        background-size: cover;
+        padding-bottom: 15vh;
+
     }
 }
