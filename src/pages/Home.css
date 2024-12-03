@@ -1,6 +1,6 @@
 .about-container {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+        linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)),
         url("../assets/imdb-top-50.webp");
     background-size: cover;
     background-repeat: no-repeat;
